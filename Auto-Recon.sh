@@ -33,9 +33,9 @@ dirbb () {
 sublist () {
   sudo sublist3r -o Report_logs/sub.txt -d $TARGET
   sleep 5
-  #for subs in $(cat sub.txt); do
-    #wfuzz -c -w $WORDLIST ${subs}/FUZZ
-#done
+  for subs in $(cat sub.txt); do
+    wfuzz -c -w $WORDLIST ${subs}/FUZZ
+done
 }
 
 #WFUZZ_WEBCONTENT
@@ -44,21 +44,20 @@ wfuzz_a () {
   wfuzz -c -w $WORDLIST --sc 200,301 ${R_TAG}/FUZZ
 
 }
-#nmapp
 
-##echo "[++] Starting the WHOIS query"
-#who
+
+echo "[++] Starting the WHOIS query"
+who
 sleep 5
-#whatweb
+whatweb
 echo "[++] Starting UNISCAN"
-#uni
+uni
 #echo "[++] Starting SUBLIST3R"
-#sublist
+sublist
 dirbb
-#konsole -e  ./auto.sh && wfuzz_a &
-#echo "[+++] Starting nmap scan in background mode "
+
 sleep 5
-#nmapp
+nmapp
 echo "[+++] Starting WFUZZ "
 sleep 3
 wfuzz_a
