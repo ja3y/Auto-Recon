@@ -2,7 +2,7 @@
 
 **Requirements**
 - Bash script (linux)
-- Wfuzz
+- Wfuzz 
 - Nmap
 - Uniscan
 - sublist3r
@@ -13,8 +13,11 @@ All of the above tools are installed by default on Kali Linux
 
 **Purpose**
 
- - This tool was designed to assist security professionals & penetration testers better understand their target or victim. 
+ - This tool was designed to assist security professionals & penetration testers better understand their target or victim(recon)
  - This tool automates the initial phases of a security assessment therefore giving the professional more time to focus on other phases of assessment. 
  - For this tool to function efficiently, the above requirements must be installed on the device used for the assessment
 
 **N/B: This tool was developed for educational purposes. Do not use this tool to engage a target without authorization **
+
+
+--
